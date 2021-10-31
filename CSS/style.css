@@ -82,3 +82,40 @@ a {
     font-size: 1.5rem;
   }
 }
+
+/*BADGES*/
+/*OOCSS principle 2 seperate structure from the skin*/
+
+/*Mobile Vesion*/
+
+.badge {
+  border-radius: 20px;
+  font-size: 2rem;
+  font-weight: 600;
+  padding: 0.5rem 2rem; /*0.5 is for vertical and 2rem for horizondal padding*/
+  white-space: nowrap; /*This pevent a badge wrapping into a second line especially when we have littel space*/
+}
+
+.badge--primary {
+  /*BEM method is used*/
+  background: var(--color-primary);
+  color: #fff;
+}
+.badge--secondary {
+  background: var(--color-secondary);
+  color: #fff;
+}
+
+.badge--samll {
+  font-size: 1.6rem;
+}
+
+/*Larger Screen= Media query @media*/
+@media screen and (min-width: 1024px) {
+  .badge {
+    font-size: 1.5rem;
+  }
+  .badge--samll {
+    font-size: 1.2rem;
+  }
+}
