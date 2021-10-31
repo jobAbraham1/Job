@@ -1,3 +1,4 @@
+/*COLOR*/
 :root {
   --color-primary: #2584ff;
   --color-secondary: #00d9ff;
@@ -6,6 +7,8 @@
   --color-body: #6211119a; /*body text*/
 }
 
+/*TYPHOGRAPHY*/
+/*Query for mobile version*/
 html {
   font-size: 62.5%; /* 62.5 of 16px = 16px is the default of font sixe of html, 62.5=10px*/
 }
@@ -36,6 +39,7 @@ p {
   margin-top: 0;
 }
 
+/*@media query for wider screens like pc*/
 @media screen and (min-width: 1024px) {
   body {
     font-size: 1.8rem;
@@ -48,5 +52,33 @@ p {
   }
   h1 {
     font-size: 2.4rem;
+  }
+}
+
+/*LINKS*/
+/*Query for mobile version*/
+a {
+  text-decoration: none; /*This removes the underline below all the links in the page.*/
+}
+.link-arrow {
+  color: var(--color-accent);
+  text-transform: uppercase; /*This property is used because in the mark up link-arrow is written in lower case*/
+  font-size: 2rem;
+  font-weight: bold;
+}
+.link-arrow::after {
+  content: "-->"; /*--> can create an arrow icon/ if that does not work add an arrow icon itself Use pesudo element here*/
+  margin-left: 5px;
+  transition: margin 0.25s; /*This meanse margin arrow movement should be in .15s speed not quick */
+}
+.link-arrow:hover::after {
+  /*It moves the arrow when we hover over the arrow and from 5px margin to 10 px margin*/
+  margin-left: 10px;
+}
+
+/*@media query for wider screens like pc*/
+@media screen and (min-width: 1024px) {
+  .link-arrow {
+    font-size: 1.5rem;
   }
 }
