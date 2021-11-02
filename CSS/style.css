@@ -148,3 +148,26 @@ a {
     padding-left: 0; /*On mobile vesion -applied 0.5 padding and desktop we applied 0 padding*/
   }
 }
+
+/*ICONS*/
+/*Combine icon images inside a sprite to reduce the number of http request send to the server (optimization techniqie)
+https://svgsprit.es/*/
+.icon {
+  width: 4rem;
+  height: 4rem;
+}
+.icon--primary {
+  fill: var(--color-primary); /* fill: property is used only for SVG files*/
+}
+
+.icon-container {
+  background: #cfe3e7;
+  width: 6.4rem;
+  height: 6.4rem;
+  border-radius: 100%; /*at this point the background looks odd. 
+  Becasue span is an inline element and width and height properties does not have any effect on it
+  To solve this issue set the display property to inline flex*/
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
