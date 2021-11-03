@@ -7,6 +7,14 @@
   --color-body: #6211119a; /*body text*/
 }
 
+/*universal selector use
+https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors*/
+*,
+*::after,/* all elements* and all elements that are dynamically inserted ::after, *::before them set the boxsizing to border vox*/
+*::before {
+  box-sizing: border-box;
+}
+
 /*TYPHOGRAPHY*/
 /*Query for mobile version*/
 html {
@@ -170,4 +178,57 @@ https://svgsprit.es/*/
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+/*No need for desktop version for Icons here*/
+
+/*BUTTONS*/
+/*Mobile*/
+.btn {
+  border-radius: 4rem;
+  border: 0;
+  cursor: pointer;
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin: 1rem 0; /*It gives vertical(1) horizondal(0)  gap between buttons */
+  padding: 2rem 3rem;
+  text-align: center;
+  text-transform: uppercase; /*ALWAYS MAKE SURE TEXT INSIDE THE BUTTON IS IN UPPER CASE */
+  white-space: nowrap; /*It prevent the text jumping into next line incase if there is no space*/
+}
+.btn--primary {
+  background: var(--color-primary);
+  color: #fff;
+}
+
+.btn--primary:hover {
+  /*  background: lighten(primary,30%); lighten is a SAS preprocesser property like darken to make slight color variation*/
+  background: #305b92;
+}
+.btn--secondary {
+  background: var(--color-secondary); /*Always test the code as you go*/
+  color: #fff;
+}
+.btn--secondary:hover {
+  background: #305b92;
+}
+.btn--accent {
+  background: var(--color-accent);
+  color: #fff;
+}
+.btn--accent:hover {
+  background: #942d16;
+}
+
+.btn--block {
+  width: 100%;
+  display: inline-block;
+  /*Why inline-block? Becasue ANGER element is a block 
+  element by default so the width will not have nay effect if we dont set display inline block */
+}
+
+/*DeskTop Version Button*/
+@media screen and (min-width: 1024px) {
+  .btn {
+    font-size: 1.5rem;
+  }
 }
