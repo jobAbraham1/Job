@@ -5,6 +5,8 @@
   --color-accent: #ff3400;
   --color-headings: #ce5108;
   --color-body: #6211119a; /*body text*/
+  --color-border: #ccc;
+  --border-radius: 3rem;
 }
 
 /*universal selector use
@@ -225,10 +227,58 @@ https://svgsprit.es/*/
   /*Why inline-block? Becasue ANGER element is a block 
   element by default so the width will not have nay effect if we dont set display inline block */
 }
-
+.btn--outline {
+  background: #fff;
+  color: var(--color-headings);
+  border: 2px solid var(--color-headings);
+}
+.btn--outline:hover {
+  background: var(--color-headings);
+  color: #fff;
+}
 /*DeskTop Version Button*/
 @media screen and (min-width: 1024px) {
   .btn {
     font-size: 1.5rem;
   }
 }
+
+/*INPUTS*/
+
+.input {
+  padding: 1.5 rem 3.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  outline: 0; /*it stops the browser propmted outline around the button*/
+  color: var(
+    --color-headings
+  ); /*It changes the default color of the text 
+  (black) to the color we use for the other text in the site*/
+  font-size: 2rem;
+}
+::placeholder {
+  /*This pesudo element helps to change the color of the  palceholder text */
+  color: #cdcbd7;
+}
+.input-group {
+  border: 1px solid var(--color-border);
+  border-radius: var(--border-radius);
+  display: flex;
+}
+.input-group .input {
+  border: 0;
+  flex-grow: 1;
+  padding: 1.5rem 1rem;
+}
+.input-group .btn {
+  /*button margin inside the input group*/
+  margin: 4px;
+}
+@media screen and (min-width: 1024px) {
+  .input {
+    font-size: 1.5rem;
+  }
+}
+
+/*GROUP INPUT*/
+/*Hou to put a button inside an input component?*/
