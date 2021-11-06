@@ -39,7 +39,7 @@
     <!--ICONS-->
 
     <span class="icon-container">
-        <svg class="icon ">
+        <svg class="icon icon--primary ">
         <use xlink:href="/images/sprite.svg#wordpress"></use>
         </svg>
     </span>
@@ -56,8 +56,93 @@
 <input type="text" class ="input" placeholder="Enter domain name here..">
 <button class="btn btn--accent">Search</button>  <!--Putting search button inside the div to make it inside the input field
     TRICK: If we add button class right above the input- Search button will move to the left-->
-
 </div>
+
+
+
+<!--CARDS-->
+
+<div style="width:50%; padding:4rem">
+    <div class="plan plan--popular">
+        <div class="card card--secondary">
+        
+        <header class="card__header"> 
+         <h3 class=" plan_name">Entry</h3>
+        <span class="plan_price">$14</span>
+        <span class="plan_biling-cycle">month</span>
+        <span class="badge badge--secondary badge--samll">10%OFF</span>
+        <span class="plan_discription">Easy start on the cloud</span>
+        <div class="card__body">
+          
+        </header> <!--We use underscore here because it is a componet inside this block. It cannot excist itsown-->
+            <ul class="list list--tick"> <!--ul.list>{Item $}*3 is the short cut to create list itemsa s given below-->
+                <li class="list__item">Unlimited Websites</li>  <!--class="list__items" __BEM convention sepearte a block from its element-internal parts of the item-->
+                <li class="list__item">Unlimited Bandwidth</li>
+                <li class="list__item">100 GB SSD Storage</li>
+                <li class="list__item">3 GB Ram</li>
+              </ul>
+              <button class="btn btn--outline btn--block">Buy Now</button>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+
+<!--PLANS 
+See above that Plan is forst and card, card header and body is inside the plan -->
+
+<!--POPULAR BADGE-->
+<!--Details are added to div class plan plan--popular above-->
+
+
+
+<!--MEDIA /MEDIA COMPONENT-->
+
+
+<!--In most cases media componentsa aree used in social media paltforms auch as FB, TW etc-->
+<div class="media">
+ <div class="media__image">
+  
+        <svg class="icon icon--primary ">
+        <use xlink:href="/images/sprite.svg#snap"></use>
+        </svg>
+    
+ </div>
+<div class="media__body">
+    <h3 class="media__title">Easy Start &Managed Updates</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, veniam.</p>
+</div>
+</div>
+
+<!--QUOTES-->
+
+<blockquote class="quote">
+    <p class="quote__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+         Obcaecati repudiandae animi laboriosam maxime eius, a explicabo fugit suscipit distinctio, 
+         dolores dolorem corporis quaerat commodi nemo. Ipsum ex incidunt ab tempore distinctio,
+          voluptatibus minima nihil quisquam dolorum minus iste natus? Voluptate quisquam nulla voluptates consectetur
+           voluptatem officia labore consequatur veritatis architecto porro quasi nobis, 
+           eligendi sed dignissimos culpa obcaecati fugit! Lau
+        dantium dicta voluptatibus, incidunt aliquid nemo vel porro accusantium odio modi,
+         facere corrupti fuga laboriosam velit.</p>
+         <footer>
+            <div class="media">
+                <div class="media__image">
+                 
+                       <svg class="icon icon--primary ">
+                       <use xlink:href="/images/sprite.svg#snap"></use>
+                       </svg>
+                   
+                </div>
+               <div class="media__body">
+                   <h3 class="media__title">Easy Start &Managed Updates</h3>
+                   <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, veniam.</p>
+               </div>
+               </div>
+             
+        </footer> <!--Footer need not be part of a page. it acan be part of a card,article,section /part of anything-->
+</blockquote>
+
 
 </body>
 </html>
