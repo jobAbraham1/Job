@@ -168,10 +168,16 @@ https://sprit.es/*/
   width: 4rem;
   height: 4rem;
 }
+.icon--samll {
+  width: 30px;
+  height: 30px;
+}
 .icon--primary {
   fill: var(--color-primary); /* fill: property is used only for SVG files*/
 }
-
+.icon--white {
+  fill: #fff;
+}
 .icon-container {
   background: #cfe3e7;
   width: 6.4rem;
@@ -182,6 +188,9 @@ https://sprit.es/*/
   display: inline-flex;
   justify-content: center;
   align-items: center;
+}
+.icon-container--accent {
+  background: var(--color-accent);
 }
 /*No need for desktop version for Icons here*/
 
@@ -451,3 +460,30 @@ See the details in the mark up*/
     ); /* 1fr 1fr 1fr; is the anther way to write*/
   }
 }
+
+/*TESTIMONIAL*/
+.testimonial {
+  padding: 3rem;
+}
+.testimonial__image {
+  position: relative;
+}
+.testimonial__image > img {
+  width: 100%; /*100% of the container makes the image responsive*/
+}
+.testimonial__image > .icon-container {
+  position: absolute;
+  top: 3rem;
+  right: -32px;
+}
+@media screen and (min-width: 768px) {
+  .testimonial .quote,
+  .testimonial.quote__author {
+    font-size: 2.4rem;
+  }
+  .testimonial.quote {
+    margin-left: 6rem;
+  }
+}
+
+/*CALL OUT*/
