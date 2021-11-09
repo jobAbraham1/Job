@@ -562,3 +562,46 @@ See the details in the mark up*/
   max-height: 100vh; /*100% of the view  port height dont set just height property*/
   opacity: 1;
 }
+
+/*BLOCKS*/
+
+.block {
+  --padding-vertical: 6rem; /*TRICK: THIS MAKES PADDING AVALABLE TO BLOCK AND ALAL ITS CHILDREN 
+  use it in the next line and for skew below*/
+  padding: Var(--padding-vertical) 2rem; /*6 for horizondal and 2 for vertical*/
+ /* border: 2px solid red; /* create first a border tempererly to see the container  and remove onece it is done*//
+}
+
+.block__header {
+  /*wrap the header and para inside a header and with name <header class="block__header"> 
+  and style it like this seperatly so that it affect only this header and para not the entire card*/
+  text-align: center;
+}
+.block__heading {
+  margin-top: 0;
+}
+
+.block--dark {
+  background: #000;
+  color: #7b858b;
+}
+
+.block--dark .block__heading {
+  /*in block dark element if we have block heading its color should be white*/
+  color: #fff;
+}
+.block--skewed-right {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+  /*each number represent X Y angle 0% 0%  topleft, top right,bottom right, bottom left*/
+}
+.block--skewed-left {
+  padding-bottom: calc(var(--padding-vertical) + 4rem);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  /*each number represent X Y angle 0% 0%  topleft, top right,bottom right, bottom left*/
+}
+
+.container {
+  max-width: 1140px;
+  margin: 0 auto; /* px for vertical margin and auto makes the space to be distributed equaly as per the screen size*/
+}
