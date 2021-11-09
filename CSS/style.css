@@ -524,3 +524,41 @@ See the details in the mark up*/
     margin: 0 2rem;
   }
 }
+
+/*COLLAPSIBLE*/
+.collapsible__header {
+  display: flex;
+  justify-content: space-between; /*space between push the content to the right edge of the */
+}
+
+.collapsible__heading {
+  margin-top: 0;
+  font-size: 3rem;
+}
+
+.collapsible__chevron {
+  transform: rotate(
+    -90deg
+  ); /*chevron is no more a drop down it is expanding to the right*/
+  transition: transform 0.5s; /*transition property animate it making the rotation slow/fast /*/
+}
+
+.collapsible__content {
+  /*display: none;  /*this none property cannot be animated so use max-height property */
+  max-height: 0; /*With height 0 we will have overflow so set overflow to hidden 
+  then go to collapsible--expanded .collapsible__content property and make max height to 100vh */
+  overflow: hidden;
+  opacity: 0;
+  transition: all 0.3s; /*to animate multiple properties use ALL property instead of max-height specifically*/
+}
+
+.collapsible--expanded .collapsible__chevron {
+  /*this is the way you can expand the cheron*/
+  transform: rotate(0);
+}
+
+.collapsible--expanded .collapsible__content {
+  /*it makes the content visible when expanded*/
+  max-height: 100vh; /*100% of the view  port height dont set just height property*/
+  opacity: 1;
+}
