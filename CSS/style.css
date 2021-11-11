@@ -605,3 +605,71 @@ See the details in the mark up*/
   max-width: 1140px;
   margin: 0 auto; /* px for vertical margin and auto makes the space to be distributed equaly as per the screen size*/
 }
+
+
+
+/*NAVIGATION BAR*/
+
+/*mobile version*/
+.nav{
+  background:#000;
+  display:flex;
+  justify-content:space-between;
+  flex-wrap:wrap; /*with felx-wrap and width properties the list goes to teh second line for mobile*/
+  padding: 0 1rem; /*make the nav bar slim horizondally*/ 
+  align-items: center; /*bring toggle button to the center of the nav bar verticaly*/
+}
+
+.nav__list{
+  width:100%;
+  margin:0;
+}
+.nav__item{
+  border-bottom: 1px solid #222;
+  padding: 0.5rem 2rem;
+  /*color:#fff; /*if you apply color here it does not change because links has itsown color. 
+  So create a seperate style property targeting anger (a) tag. See below. >a is the direct child selector  */
+}
+.nav__item > a{
+  color:#d2d0db;
+  transition:color 0.3s;
+}
+
+.nav__item > a:hover{ /*when hover over the link it changes the color*/
+  color:#fff;
+}
+
+.nav__toggler{
+  opacity: 0.5; /* opacity helps to have slightly fade color */
+  transition:box-shadow .15s;
+  cursor:pointer; /*toggler clickable*/
+}
+.nav.collapsible--expanded .nav__toggler{
+  opacity: 1; /*color become brighter when we click on the toggler button*/
+box-shadow:0 0 0 3px #666; /* 0 0 h and veritcal offset,0 for making the blur and and shadow softer spread it 3px */
+border-radius: 5px;
+
+}
+
+.nav__brand{
+  transform:translateY(5px); /*it brings down the logo 3 px down to adjust the bottom gap*/
+}
+
+/*Desk Top Version*/
+@media screen and (min-width:768px){
+.nav__toggler{
+  display:none; /*this hide the toggler when it is on the wider screens*/
+}
+.nav__list{
+width:auto;
+display:flex;/*this bring menu items in the first line horizondally*/
+font-size:1.6rem;
+max-height:100%; /*By setting the height nav menu will be always visible on a wide screen. 
+If we font want just remove the height*/
+opacity:1;
+
+}
+.nav__item{
+  border:0;
+}
+}

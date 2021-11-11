@@ -1,0 +1,27 @@
+<!--NAVIGATION BAR-->
+
+    <!--Here we need 3 elements 
+    logo
+    toggle button
+    UL -unordered list-->
+    <nav class="nav collapsible"> <!--when java script see COLLAPSIBLE class it cicks in and do the function collap and expand-->
+        <a class="nav__brand"href="/"><img src="/images/logo.svg" alt=""></a> 
+        <!--this anger helps the user when he clocks on the logo it takes him to home page
+heref / refffers to the root file-->
+
+<svg class="icon icon--white nav__toggler ">
+    <use xlink:href="/images/sprite.svg#menu"></use>
+    </svg>
+  <ul class="list nav__list collapsible__content"> <!--each list item should have an anger tag because
+    it should take the user to the respective page when they click, 
+    when java script see COLLAPSIBLE class it cicks in and do the function collap and expand-->
+         <li class="nav__item"><a href="#">Hosting</a></li> 
+         <li class="nav__item"><a href="#">VPS</a></li>
+         <li class="nav__item"><a href="#">Domain</a></li>
+         <li class="nav__item"><a href="#">Pricing</a></li> <!--Now go to the style sheet first set back ground color and set the items to flex-->
+  </ul>
+    </nav>
+
+
+
+<script src="/Java Script/index.js"></script> <!--Why we add js code at the end of the mark up becasue we dont want the js code to hold up the rendering of the page each time it is dipolyed-->
