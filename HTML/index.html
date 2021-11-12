@@ -288,7 +288,7 @@ heref / refffers to the root file-->
 
 
 
-<!--HERO/BANNER-->
+<!--HERO/BANNER--> <!--OPTIMIZING IMAGES-->
 
 <section class=" block block--dark block--skewed-left hero">
 
@@ -302,12 +302,45 @@ heref / refffers to the root file-->
             <a href="" class="btn btn--accent btn--stretched">Get Started</a>
         </header>
 
-        <img class="hero__image" src="/Images/banner.png"/>
+        <picture>
+            <source type="/image/webp" srcset="/images/banner.webp 1x, images/banner@2x.webp 2x">
+            <source type="/image/png" srcset="/images/banner.png 1x, images/banner@2x.png 2x">
+            <img class="hero__image" src="/Images/banner.png"/>
+        </picture>
         </div>
+</section>
 
 
+
+<!--DOMAIN BLOCK-->
+
+<section class="block block container block-domain">
+
+    <header class="block__header"> <!--block header class helps to center the heading -->
+        <h2>
+           Starting at $9 per month 
+        </h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed, eaque!</p>
+    </header>
+    <div class="input-group box-shadow">
+    
+        <input type="text" class ="input" placeholder="Enter domain name here..">
+        <button class="btn btn--accent"><svg class="icon icon--white ">
+            <use xlink:href="/images/sprite.svg#search"></use>
+            </svg>Search</button>  <!--Putting search button inside the div to make it inside the input field
+            TRICK: If we add button class right above the input- Search button will move to the left-->
+        </div>
+    <ul class="list block-domain__prices">
+       <li ><span class=" badge badge--secondary">.com $9</span></li>
+       <li>.sg $10</li>
+       <li>.space$11</li>
+       <li>.info $14</li>
+       <li>.net $10</li>
+       <li>.xyz $10</li>
+    </ul>
 
 </section>
+
 
 <script src="/Java Script/index.js"></script> <!--Why we add js code at the end of the mark up becasue we dont want the js code to hold up the rendering of the page each time it is dipolyed-->
 

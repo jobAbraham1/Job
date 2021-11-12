@@ -205,9 +205,16 @@ https://sprit.es/*/
   font-weight: 600;
   margin: 1rem 0; /*It gives vertical(1) horizondal(0)  gap between buttons */
   padding: 2rem 3rem;
+  outline:0;
   text-align: center;
   text-transform: uppercase; /*ALWAYS MAKE SURE TEXT INSIDE THE BUTTON IS IN UPPER CASE */
   white-space: nowrap; /*It prevent the text jumping into next line incase if there is no space*/
+}
+.btn .icon{
+  width:2rem;
+  height:2rem;
+  margin-right:1rem;
+  vertical-align: middle; /*center the icon*/
 }
 .btn--primary {
   background: var(--color-primary);
@@ -283,7 +290,7 @@ https://sprit.es/*/
 .input-group .input {
   border: 0;
   flex-grow: 1;
-  padding: 1.5rem 1rem;
+  padding: 1.5rem 2rem;
 }
 .input-group .btn {
   /*button margin inside the input group*/
@@ -698,5 +705,36 @@ margin: 2rem 0 5rem;
   .hero__content{
     text-align:left;
     align-self:center; /*this align the text to the middle of the image verically*/
+  }
+}
+
+
+
+/*DOMAIN BLOCK*/
+/*Mobile Version*/
+.block-domain .input-group{
+  box-shadow:0 0 30px 20px #e6ebee;
+  border:0;
+  margin:4rem auto;
+  max-width:670px;
+}
+.block-domain__prices{
+  display:grid;
+  grid-template-columns:repeat(3, 1fr );
+  grid-template-rows:repeat(2, 6rem ); /*with column and rows we now designed a grid*/
+  font-size:2rem;
+  font-weight:600;
+  justify-items:center;
+  max-width:700px;
+  margin:0 auto;
+  
+}
+@media screen and (min-width:768px){
+  .block-domain__prices{
+    grid-template-columns:repeat(auto-fit,minmax(10rem, 1fr));
+     /*auto-fit value is the trick no need to change anything in the future if we decide to remove a value from the grid
+     but along with auto fit we should use minmax value for this to work minmax(10rem, 1fr) */
+    /*divide the space into 6 fr and give each 1 fr */
+    
   }
 }
