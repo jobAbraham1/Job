@@ -338,7 +338,15 @@ See the details in the mark up*/
   background: #058aa1;
 }
 
+.card--primary .badge--primary{
+  background:#126de4;
+
+}
+
 /*PLAN*/
+.plan{
+  transition:transform.2s ease-out; /*The movement of the card when hover over bacome gradual*/
+}
 .plan_name {
   color: #fff;
   margin: 0;
@@ -364,6 +372,10 @@ See the details in the mark up*/
 .plan.list__item {
   margin-bottom: 2rem;
 }
+
+.plan--popular{
+  transform:scale(1.1) /*it increases the size of the popular plan card*/
+}
 .plan--popular .card__header {
   position: relative;
 }
@@ -375,6 +387,13 @@ See the details in the mark up*/
   top: -6px;
   right: 5%; /*it takes the total width of the card and 5%offset*/
 }
+.plan:hover{
+  transform:scale(1.05); /*it increases the size of the card when hover over*/
+}
+.plan--popular:hover{
+  transform:scale(1.15);
+}
+
 @media screen and (min-width: 1024px) {
   plan__name {
     font-size: 1.4rem;
@@ -737,4 +756,15 @@ margin: 2rem 0 5rem;
     /*divide the space into 6 fr and give each 1 fr */
     
   }
+}
+
+/*PLAN BLOCK*/
+
+.block-plans .grid{
+  gap:8rem 4rem; /*8rem for column gives horizondal gap between cards*/
+
+}
+.block-plan .card{
+  max-width:500px;
+  margin:0 auto;
 }
