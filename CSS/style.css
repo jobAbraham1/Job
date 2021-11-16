@@ -20,6 +20,11 @@ https://developer.mozilla.org/en-US/docs/Web/CSS/Universal_selectors*/
 
 /*TYPHOGRAPHY*/
 /*Query for mobile version*/
+
+::selection{
+  background: var(--color-primary);
+  color:#fff;
+}
 html {
   font-size: 62.5%; /* 62.5 of 16px = 16px is the default of font sixe of html, 62.5=10px*/
 }
@@ -46,6 +51,7 @@ h2 {
 }
 h3 {
   font-size: 3rem;
+  font-weight:500;
 }
 p {
   margin-top: 0;
@@ -138,7 +144,7 @@ a {
 .list {
   list-style: none; /*It helps to get rid of the default bullet point*/
   padding-left: 0; /*This get rid of the default browser padding*/
-  color: var(--color-headings);
+  
 }
 
 .list--inline .list__item {
@@ -149,6 +155,7 @@ a {
 .list--tick {
   list-style-image: url(/Images/tick.svg); /*Use URL () function to upload an image*/
   padding-left: 3rem; /*if the image is not showing up in the live server add left padding which could solve the issue*/
+  color: var(--color-headings);
 }
 .list--tick .list__item {
   padding-left: 0.5rem; /*use nesting here to avioed applying this rule to all the items in the list */
@@ -416,6 +423,7 @@ See the details in the mark up*/
 
 .media {
   display: flex;
+  margin-bottom:4rem;
 }
 .media__title {
   margin-top: 0;
@@ -613,18 +621,21 @@ See the details in the mark up*/
   color: #7b858b;
 }
 
-.block--dark .block__heading {
+.block--dark h1,      /*we can also just use .block__heading as class and add here in style sheet .block__heading and color*/
+.block--dark h2,
+.block--dark h3
+{
   /*in block dark element if we have block heading its color should be white*/
   color: #fff;
 }
 .block--skewed-right {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 90%);
   /*each number represent X Y angle 0% 0%  topleft, top right,bottom right, bottom left*/
 }
 .block--skewed-left {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
-  clip-path: polygon(0% 0%, 100% 0%, 100% 80%, 0% 100%);
+  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
   /*each number represent X Y angle 0% 0%  topleft, top right,bottom right, bottom left*/
 }
 
@@ -704,9 +715,7 @@ opacity:1;
 
 
 /*HERO/BANNER*/
-.hero{
-  clip-path: polygon(0% 0%, 100% 0%, 100% 90%, 0% 100%);
-}
+
 .hero__tagline{
   font-size:2rem;
    color:#b9c3cf;
@@ -787,4 +796,29 @@ margin: 2rem 0 5rem;
   .feature:nth-of-type(even) .feature__content{ /*changeing the content to second to first as the size of the screen changes*/
     order:2;
   }
+}
+
+
+
+/*SHOWCASE BLOCK*/
+
+.block-showcase__image >img{
+width:100%;
+}
+
+@media screen and (min-width:768px){
+
+.block-showcase.grid{
+  grid-template-columns: 50% 50%;
+}
+
+  .block-showcase__image{
+    
+    justify-self: end;
+    }
+
+    .block-showcase__image >img{
+      width:auto;
+      max-width:700px;
+    }
 }
