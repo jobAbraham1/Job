@@ -611,6 +611,7 @@ See the details in the mark up*/
   /*wrap the header and para inside a header and with name <header class="block__header"> 
   and style it like this seperatly so that it affect only this header and para not the entire card*/
   text-align: center;
+  margin-bottom:4rem;
 }
 .block__heading {
   margin-top: 0;
@@ -822,3 +823,5 @@ width:100%;
       max-width:700px;
     }
 }
+
+/*TESTIMONIAL BLOCK*/
