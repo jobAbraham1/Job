@@ -642,7 +642,7 @@ See the details in the mark up*/
 
 .container {
   max-width: 1140px;
-  margin: 0 auto; /* px for vertical margin and auto makes the space to be distributed equaly as per the screen size*/
+  margin: 0 auto; /* 0px for vertical margin and auto makes the space to be distributed equaly as per the screen size*/
 }
 
 
@@ -825,3 +825,75 @@ width:100%;
 }
 
 /*TESTIMONIAL BLOCK*/
+/*See the mark up and style sheeta bove for details*/
+
+/*FOOTER*/
+
+/*Mobile*/
+.footer{
+  background:#232323;
+}
+.footer a{
+  color:#777;
+  transition:color 0.3s;
+}
+
+.footer a:hover{  /*this is how we create hover effect*/
+  color:#fff;
+}
+.footer__section{
+  padding:2rem;
+  border-bottom:1px solid #393939; /*it create a visible line in the bottom of each section as border*/
+}
+.footer__section.list{
+  margin:0;
+}
+.footer__heading{
+  text-transform:uppercase;
+  font-weight:600;
+}
+.footer__brand{
+  margin:5rem;
+  text-align:center;
+}
+/*TODO: img{width:100;} set a general rule for all images width 100% to make them responsive */
+
+
+.footer__brand img{
+  width:100%;
+  max-width:230px;
+}
+.footer__copyright{
+  font-size:2.1rem;
+  color:#fff;
+  opacity:0.3;
+}
+
+/*Desktop version*/
+@media screen and (min-width: 768px){ /* this query brings footer herding horizondal and menus right under each heading vertical on wider screens*/
+  .footer__sections {
+    grid-template-columns:repeat(auto-fit, minmax(10rem, 1fr)); /*TRICK: auto-fit helps the grid to fit as many items as possible*/
+  }
+
+}
+.footer .collapsible__chevron{ /* This means in the footer section if we have a chevron, it should be hidden*/
+display:none;
+}
+.footer.collapsible__content{
+  opacity:1;
+  max-height:100%;
+}
+
+.footer__brand{
+  order:-1; /*-1 moved the logo (brand ) to the left of the footer. by default 0 keeps it on the right side*/
+  margin-top:1rem; /*moved logo to up*/
+}
+.footer__copyright{
+  font-size:1.5rem;
+}
+.footer__section{
+  border:none;
+}
+.footer__heading{
+  font-size:1.6rem;
+}
