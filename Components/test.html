@@ -1,0 +1,721 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/normalize.css">
+    <link rel="stylesheet" href="/CSS/style.css">
+</head>
+<body style="padding:5rem;"> 
+    <!--TYPOGRAPHY-->
+    <h1>Heading 1</h1>
+    <h2>Heading 2</h2>
+    <h3>Heading 3</h3>
+    
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, deleniti!</p>
+
+
+    <!--LINK-ARROW-->
+<a href="# class="link-arrow">Learn More</a>
+
+<!--BADGES-->
+<span class="badge badge--primary badge--small"> 10% Off</span>
+
+<!--LISTS-->
+
+
+<ul class="list list--tick"> <!--ul.list>{Item $}*3 is the short cut to create list itemsa s given below-->
+    <li class="list__item">Item 1</li>  <!--class="list__items" __BEM convention sepearte a block from its element-internal parts of the item-->
+    <li class="list__item">Item 2</li>
+    <li class="list__item">Item 3</li>
+  </ul>
+
+
+    <!--ICONS-->
+
+    <span class="icon-container">
+        <svg class="icon icon--primary ">
+        <use xlink:href="/images/sprite.svg#wordpress"></use>
+        </svg>
+    </span>
+
+    <!--BUTTONS-->
+
+  
+    <button class="btn btn--primary btn--block">Buy Now </button> <!--Add btn--secondary btn--accent -->
+    <a href="#" class="btn btn--secondary btn--block">Buy Now</a>
+
+    <!--INPUT-->
+<div class="input-group">
+    
+<input type="text" class ="input" placeholder="Enter domain name here..">
+<button class="btn btn--accent">Search</button>  <!--Putting search button inside the div to make it inside the input field
+    TRICK: If we add button class right above the input- Search button will move to the left-->
+</div>
+
+
+
+<!--CARDS-->
+
+<div style="width:50%; padding:4rem">
+    <div class="plan plan--popular">
+        <div class="card card--secondary">
+        
+        <header class="card__header"> 
+         <h3 class=" plan_name">Entry</h3>
+        <span class="plan_price">$14</span>
+        <span class="plan_biling-cycle">month</span>
+        <span class="badge badge--secondary badge--samll">10%OFF</span>
+        <span class="plan_discription">Easy start on the cloud</span>
+        <div class="card__body">
+          
+        </header> <!--We use underscore here because it is a componet inside this block. It cannot excist itsown-->
+            <ul class="list list--tick"> <!--ul.list>{Item $}*3 is the short cut to create list itemsa s given below-->
+                <li class="list__item">Unlimited Websites</li>  <!--class="list__items" __BEM convention sepearte a block from its element-internal parts of the item-->
+                <li class="list__item">Unlimited Bandwidth</li>
+                <li class="list__item">100 GB SSD Storage</li>
+                <li class="list__item">3 GB Ram</li>
+              </ul>
+              <button class="btn btn--outline btn--block">Buy Now</button>
+            </div>
+        </div>
+        </div>
+        </div>
+    </div>
+
+<!--PLANS 
+See above that Plan is forst and card, card header and body is inside the plan -->
+
+<!--POPULAR BADGE-->
+<!--Details are added to div class plan plan--popular above-->
+
+
+
+<!--MEDIA /MEDIA COMPONENT-->
+
+
+<!--In most cases media componentsa aree used in social media paltforms auch as FB, TW etc-->
+<div class="media">
+ <div class="media__image">
+  
+        <svg class="icon icon--primary ">
+        <use xlink:href="/images/sprite.svg#snap"></use>
+        </svg>
+    
+ </div>
+<div class="media__body">
+    <h3 class="media__title">Easy Start &Managed Updates</h3>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, veniam.</p>
+</div>
+</div>
+
+<!--QUOTES-->
+
+<blockquote class="quote">
+    <p class="quote__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+         Obcaecati repudiandae animi laboriosam maxime eius, a explicabo fugit suscipit distinctio, 
+         dolores dolorem corporis quaerat commodi nemo. Ipsum ex incidunt ab tempore distinctio,
+          voluptatibus minima nihil quisquam dolorum minus iste natus? Voluptate quisquam nulla voluptates consectetur
+           voluptatem officia labore consequatur veritatis architecto porro quasi nobis, 
+           eligendi sed dignissimos culpa obcaecati fugit! Lau
+        dantium dicta voluptatibus, incidunt aliquid nemo vel porro accusantium odio modi,
+         facere corrupti fuga laboriosam velit.</p>
+         <footer>
+            <div class="media">
+                <div class="media__image">
+                 
+                       <svg class="icon icon--primary quote__line">
+                       <use xlink:href="/images/sprite.svg#line"></use>
+                       </svg>
+                   
+                </div>
+               <div class="media__body">
+                   <h3 class="media__title quote__author">John Smith</h3>
+                   <p class="quote__company">ABC Company</p>
+               </div>
+               </div>
+             
+        </footer> <!--Footer need not be part of a page. it acan be part of a card,article,section /part of anything-->
+</blockquote>
+
+<!--GRIDS-->
+<div class="grid grid--1x3"> <!--Use this code grid--cols-2. grid--cols-3 instead 1*2 if you like-->
+<div style="height:100px;background:yellow"></div>
+<div style="height:100px;background:dodgerblue"></div>
+<div style="height:100px;background:tomato"></div>
+</div>
+
+
+
+<!--TESTIMONIAL-->
+
+<div class="card testimonial">
+    <div class="grid grid--1x2">
+        <div class="testimonial__image">
+            <img src="/images/testimonial.jpg" alt="A happy, smiling customer">
+            <span class="icon-container icon-container--accent">
+                <svg class="icon icon--white icon--samll ">
+                <use xlink:href="/images/sprite.svg#quotes"></use>
+                </svg>
+            </span>
+        
+        </div>
+        <div>
+
+        <blockquote class="quote">
+            <p class="quote__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                 Obcaecati repudiandae animi laboriosam maxime eius, a explicabo fugit suscipit distinctio, 
+                 dolores dolorem corporis quaerat commodi nemo. Ipsum ex incidunt ab tempore distinctio,
+                  voluptatibus minima nihil quisquam dolorum minus iste natus? Voluptate quisquam nulla voluptates consectetur
+                   voluptatem </p>
+                 <footer>
+                    <div class="media">
+                        <div class="media__image">
+                         
+                               <svg class="icon icon--primary quote__line">
+                               <use xlink:href="/images/sprite.svg#line"></use>
+                               </svg>
+                           
+                        </div>
+                       <div class="media__body">
+                           <h3 class="media__title quote__author">John Smith</h3>
+                           <p class="quote__company">ABC Company</p>
+                       </div>
+                       </div>
+                     
+                </footer> <!--Footer need not be part of a page. it acan be part of a card,article,section /part of anything-->
+        </blockquote>
+        
+    </div>
+    </div>
+</div>
+
+<!--CALLOUT-->
+ <div class="callout callout--primary">
+<div class="grid grid--1x2">
+<div class="callout__content">
+    <h2 class="callout__heading">Ready to Get Started?</h2>
+    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Vitae reprehenderit a quae temporibus quis, 
+        blanditiis non facilis delectus optio iste nulla, veniam voluptatem eos officiis.</p>
+        
+</div>
+<a href="#" class="btn btn--secondary btn--streched">Get Started</a>
+</div>
+ </div>
+
+
+<!--COLLAPSIBLE-->
+
+
+<div class="collapsible collapsible--expanded">
+<header class="collapsible__header">
+    <h2 class ="collapsible__heading"> Item 1 <h2>
+       <!--<span class="icon-container"> this is removed to remove the container around the icon--> 
+            <svg class="icon icon--white collapsible__chevron"> <!--Icon color-->
+            <use xlink:href="/images/sprite.svg#chevron"></use>
+            </svg>
+        </span>
+</header>
+<div class="collapsible__content">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptas maiores explicabo dolore magni libero quae?
+</div>
+
+</div>
+
+
+
+<!--BLOCKS-->
+
+<!--use section elemnt to create a block-->
+
+<section class="block container">
+
+<header class="block__header">
+    <h2 class="block__heading">Heading</h2>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+</header>
+<div style="width:30%; padding:4rem">
+    <div class="card card--secondary">
+        <header class="card__header">Card Title</header>
+        <div class="card__body">
+            Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        </div>
+
+    </div>
+
+</div>
+
+</section> 
+
+<section class="block block--dark block--skewed-left"> <!--right/left-->
+
+    <div class="container">
+        <h2 class="block__heading">Heading</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+    </div>
+    
+    </section> 
+    
+
+    <!--NAVIGATION BAR-->
+
+    <!--Here we need 3 elements 
+    logo
+    toggle button
+    UL -unordered list-->
+    <nav class="nav collapsible"> <!--when java script see COLLAPSIBLE class it cicks in and do the function collap and expand-->
+        <a class="nav__brand"href="/"><img src="/images/logo.svg" alt=""></a> 
+        <!--this anger helps the user when he clocks on the logo it takes him to home page
+heref / refffers to the root file-->
+
+<svg class="icon icon--white nav__toggler ">
+    <use xlink:href="/images/sprite.svg#menu"></use>
+    </svg>
+  <ul class="list nav__list collapsible__content"> <!--each list item should have an anger tag because
+    it should take the user to the respective page when they click, 
+    when java script see COLLAPSIBLE class it cicks in and do the function collap and expand-->
+         <li class="nav__item"><a href="#">Hosting</a></li> 
+         <li class="nav__item"><a href="#">VPS</a></li>
+         <li class="nav__item"><a href="#">Domain</a></li>
+         <li class="nav__item"><a href="#">Pricing</a></li> <!--Now go to the style sheet first set back ground color and set the items to flex-->
+  </ul>
+    </nav>
+
+
+
+<!--HERO/BANNER--> <!--OPTIMIZING IMAGES-->
+
+<section class=" block block--dark block--skewed-left hero">
+
+<div class=" container grid grid--1x2"> 
+    <!--.grid.grid--1x2> to put the 2 column grid inside a 
+        container we can do it in two ways create a seperate container class and add gird inside that/ 
+        caoninater grid as shown above-->
+        <header class="block__header hero__content">
+            <h1 class="block__heading">Cloud Hosting for Pros</h1>
+            <p class ="hero__tagline">Diploy your website in less than 60 seconds.</p>
+            <a href="" class="btn btn--accent btn--stretched">Get Started</a>
+        </header>
+
+        <picture>
+            <source type="/image/webp" srcset="/images/banner.webp 1x, images/banner@2x.webp 2x">
+            <source type="/image/png" srcset="/images/banner.png 1x, images/banner@2x.png 2x">
+            <img class="hero__image" src="/Images/banner.png"/>
+        </picture>
+        </div>
+</section>
+
+
+
+<!--DOMAIN BLOCK-->
+
+<section class="block block container block-domain">
+
+    <header class="block__header"> <!--block header class helps to center the heading -->
+        <h2>
+           Starting at $9 per month 
+        </h2>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Sed, eaque!</p>
+    </header>
+    <div class="input-group box-shadow">
+    
+        <input type="text" class ="input" placeholder="Enter domain name here..">
+        <button class="btn btn--accent"><svg class="icon icon--white ">
+            <use xlink:href="/images/sprite.svg#search"></use>
+            </svg>Search</button>  <!--Putting search button inside the div to make it inside the input field
+            TRICK: If we add button class right above the input- Search button will move to the left-->
+        </div>
+    <ul class="list block-domain__prices">
+       <li ><span class=" badge badge--secondary">.com $9</span></li>
+       <li>.sg $10</li>
+       <li>.space$11</li>
+       <li>.info $14</li>
+       <li>.net $10</li>
+       <li>.xyz $10</li>
+    </ul>
+</section>
+
+<!--PLAN BLOCK-->
+
+<section class="block container block-plans">
+ <div class=" grid grid--1x3">
+     
+   
+        <div class="plan">
+            <div class="card card--secondary">
+            <header class="card__header"> 
+             <h3 class=" plan_name">Entry</h3>
+            <span class="plan_price">$14</span>
+            <span class="plan_biling-cycle">month</span>
+            <span class="badge badge--secondary badge--samll">10%OFF</span>
+            <span class="plan_discription">Easy start on the cloud</span>
+            <div class="card__body">
+              
+            </header> <!--We use underscore here because it is a componet inside this block. It cannot excist itsown-->
+                <ul class="list list--tick"> <!--ul.list>{Item $}*3 is the short cut to create list itemsa s given below-->
+                    <li class="list__item">Unlimited Websites</li>  <!--class="list__items" __BEM convention sepearte a block from its element-internal parts of the item-->
+                    <li class="list__item">Unlimited Bandwidth</li>
+                    <li class="list__item">100 GB SSD Storage</li>
+                    <li class="list__item">3 GB Ram</li>
+                  </ul>
+                  <button class="btn btn--outline btn--block">Buy Now</button>
+                </div>
+            </div>
+            
+
+            <!--2nd Card-->
+    
+            <div class="plan plan--popular">
+                <div class="card card--primary">
+                <header class="card__header"> 
+                 <h3 class=" plan_name">Entry</h3>
+                <span class="plan_price">$14</span>
+                <span class="plan_biling-cycle">month</span>
+                <span class="badge badge--primary badge--samll">10%OFF</span>
+                <span class="plan_discription">Easy start on the cloud</span>
+                <div class="card__body">
+                  
+                </header> <!--We use underscore here because it is a componet inside this block. It cannot excist itsown-->
+                    <ul class="list list--tick"> <!--ul.list>{Item $}*3 is the short cut to create list itemsa s given below-->
+                        <li class="list__item">Unlimited Websites</li>  <!--class="list__items" __BEM convention sepearte a block from its element-internal parts of the item-->
+                        <li class="list__item">Unlimited Bandwidth</li>
+                        <li class="list__item">100 GB SSD Storage</li>
+                        <li class="list__item">3 GB Ram</li>
+                      </ul>
+                      <button class="btn btn--outline btn--block">Buy Now</button>
+                    </div>
+                </div>
+                
+   <!--3rd Card-->
+
+   <div class="plan">
+    <div class="card card--secondary">
+    <header class="card__header"> 
+     <h3 class=" plan_name">Entry</h3>
+    <span class="plan_price">$14</span>
+    <span class="plan_biling-cycle">month</span>
+    <span class="badge badge--secondary badge--samll">10%OFF</span>
+    <span class="plan_discription">Easy start on the cloud</span>
+    <div class="card__body">
+      
+    </header> <!--We use underscore here because it is a componet inside this block. It cannot excist itsown-->
+        <ul class="list list--tick"> <!--ul.list>{Item $}*3 is the short cut to create list itemsa s given below-->
+            <li class="list__item">Unlimited Websites</li>  <!--class="list__items" __BEM convention sepearte a block from its element-internal parts of the item-->
+            <li class="list__item">Unlimited Bandwidth</li>
+            <li class="list__item">100 GB SSD Storage</li>
+            <li class="list__item">3 GB Ram</li>
+          </ul>
+          <button class="btn btn--outline btn--block">Buy Now</button>
+        </div>
+    </div>
+
+ </div>
+</section>
+
+
+<!--FEATURS-->
+<section class="block container" >
+    <header class="block__header">
+        <h2>Host on the Cloud to Keep Growing</h2>
+        <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, ut molestiae iure aut vitae maiores!</p>
+
+    </header>
+    <article class="grid grid--1x2 feature"> <!--independant self contained element  should be the content of article-->
+        <div class="feature__content">
+            <span class="icon-container">
+                <svg class="icon icon--primary ">
+                <use xlink:href="/images/sprite.svg#easy"></use>
+                </svg>
+            </span>
+            <heading >
+                <h3 class="feature__heading"> Super Easy To Use</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, beatae?</p>
+              <a href="#" class="link-arrow">Learn More</a>
+            </heading>
+        </div>
+        <picture>
+            <source type="image/webp" srcset="/images/easy.webp 1x,images/easy@2x.webp 2x"> 
+            <source type="image/jpg" srcset="/images/easy.jpg 1x,images/easy@2x.jpg 2x"> 
+        
+            <img class="feature__image" src="/images/easy@2x.jpg" alt=""/>
+        </picture>
+        </article> 
+
+
+
+        <article class="grid grid--1x2 feature"> <!--independant self contained element  should be the content of article-->
+            <div class="feature__content">
+                <span class="icon-container">
+                    <svg class="icon icon--primary ">
+                    <use xlink:href="/images/sprite.svg#easy"></use>
+                    </svg>
+                </span>
+                <heading >
+                    <h3 class="feature__heading"> Simply Fast Websites</h3>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, beatae?</p>
+                  <a href="#" class="link-arrow">Learn More</a>
+                </heading>
+            </div>
+            <picture>
+                <source type="image/webp" srcset="/images/easy.webp 1x,images/easy@2x.webp 2x"> 
+                <source type="image/jpg" srcset="/images/easy.jpg 1x,images/easy@2x.jpg 2x"> 
+            
+                <img class="feature__image" src="/images/easy@2x.jpg" alt=""/>
+            </picture>
+            </article> 
+
+
+
+
+            <article class="grid grid--1x2 feature"> <!--independant self contained element  should be the content of article-->
+                <div class="feature__content">
+                    <span class="icon-container">
+                        <svg class="icon icon--primary ">
+                        <use xlink:href="/images/sprite.svg#easy"></use>
+                        </svg>
+                    </span>
+                    <heading >
+                        <h3 class="feature__heading"> Simply Fast Websites</h3>
+                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, beatae?</p>
+                      <a href="#" class="link-arrow">Learn More</a>
+                    </heading>
+                </div>
+                <picture>
+                    <source type="image/webp" srcset="/images/easy.webp 1x,images/easy@2x.webp 2x"> 
+                    <source type="image/jpg" srcset="/images/easy.jpg 1x,images/easy@2x.jpg 2x"> 
+                
+                    <img class="feature__image" src="/images/easy@2x.jpg" alt=""/>
+                </picture>
+                </article> 
+</section>
+
+
+
+<!--SHOWCASE BLOCK-->
+
+<section class="block block--dark block--skewed-right block-showcase">
+
+
+<header class="block__header">
+    <h2> Uer-friendly Control Panel </h2>
+</header>
+<div class="container grid grid--1x2">
+    
+<picture class="block-showcase__image">
+    <source type="image/webp" srcset="/images/ipad.webp 1x,images/ipad@2x.webp 2x"> 
+     <source type="image/png" srcset="/images/easy.png 1x,images/easy@2x.png 2x"> 
+    <img src="/Images/ipad.png" alt=""/>
+
+</picture>
+<ul class="list"> <!--this class of list removes the bullet point that comes with UL-->
+    <li>
+        <div class="media">
+            <div class="media__image">
+             
+                   <svg class="icon icon--primary ">
+                   <use xlink:href="/images/sprite.svg#snap"></use>
+                   </svg>
+               
+            </div>
+           <div class="media__body">
+               <h3 class="media__title">Easy Start & Managed Updates</h3>
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, veniam.</p>
+           </div>
+           </div>
+    </li>
+
+    <li>
+        <div class="media">
+            <div class="media__image">
+             
+                   <svg class="icon icon--primary ">
+                   <use xlink:href="/images/sprite.svg#snap"></use>
+                   </svg>
+               
+            </div>
+           <div class="media__body">
+               <h3 class="media__title">Staging,GIT & WP-CLI</h3>
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, veniam.</p>
+           </div>
+           </div>
+    </li>
+    <li>
+
+        <div class="media">
+            <div class="media__image">
+             
+                   <svg class="icon icon--primary ">
+                   <use xlink:href="/images/sprite.svg#wordpress"></use>
+                   </svg>
+               
+            </div>
+           <div class="media__body">
+               <h3 class="media__title"> Dynamic Caching & More</h3>
+               <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Mollitia, veniam.</p>
+           </div>
+           </div>
+    </li>
+</ul>
+</div>
+</section>
+
+<!--TESTIMONIAL BLOCK-->
+
+<section class="block">
+    <header class="block__header">
+        <h2> What our Customers are Saying </h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, accusamus doloribus?</p>
+    </header>
+
+    <div class="container">
+        <div class="card testimonial">
+            <div class="grid grid--1x2">
+                <div class="testimonial__image">
+                    <img src="/images/testimonial.jpg" alt="A happy, smiling customer">
+                    <span class="icon-container icon-container--accent">
+                        <svg class="icon icon--white icon--samll ">
+                        <use xlink:href="/images/sprite.svg#quotes"></use>
+                        </svg>
+                    </span>
+                
+                </div>
+                <div>
+        
+                <blockquote class="quote">
+                    <p class="quote__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+                         Obcaecati repudiandae animi laboriosam maxime eius, a explicabo fugit suscipit distinctio, 
+                         dolores dolorem corporis quaerat commodi nemo. Ipsum ex incidunt ab tempore distinctio,
+                          voluptatibus minima nihil quisquam dolorum minus iste natus? Voluptate quisquam nulla voluptates consectetur
+                           voluptatem </p>
+                         <footer>
+                            <div class="media">
+                                <div class="media__image">
+                                 
+                                       <svg class="icon icon--primary quote__line">
+                                       <use xlink:href="/images/sprite.svg#line"></use>
+                                       </svg>
+                                   
+                                </div>
+                               <div class="media__body">
+                                   <h3 class="media__title quote__author">John Smith</h3>
+                                   <p class="quote__company">ABC Company</p>
+                               </div>
+                               </div>
+                             
+                        </footer> <!--Footer need not be part of a page. it acan be part of a card,article,section /part of anything-->
+                </blockquote>
+                
+            </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+<!--FOOTER-->
+
+<footer class="block block--dark footer "> <!--footer class is used here to target the
+     background color Targeting this way helps to keep the text color and remove block--dark background  color-->
+<div class="container grid footer__sections">
+    <!--add below collapsible component to add miltiple sections repalce DIV  with SECTION and copy 
+        and paste below according to how manysections to have as per design mockup -->
+    <section class="collapsible collapsible--expanded footer__section">
+        <header class="collapsible__header">
+            <h2 class ="collapsible__heading footer__heading"> products <h2>
+               <!--<span class="icon-container"> this is removed to remove the container around the icon--> 
+                    <svg class="icon icon--white collapsible__chevron"> <!--Icon color-->
+                    <use xlink:href="/images/sprite.svg#chevron"></use>
+                    </svg>
+                </span>
+        </header>
+        <div class="collapsible__content">
+            <ul class="list">
+                <li><a href="#"> Website Hosting  </a></li>
+                <li><a href="#"> Free Automated Wordpress   </a></li>
+                <li><a href="#"> Migration </a></li>
+            </ul>
+        </div>
+        
+    </section>
+
+    <section class="collapsible collapsible--expanded footer__section"> <!--remove collapsible--expanded class -->
+        <header class="collapsible__header">
+            <h2 class ="collapsible__heading footer__heading"> Company <h2>
+               <!--<span class="icon-container"> this is removed to remove the container around the icon--> 
+                    <svg class="icon icon--white collapsible__chevron"> <!--Icon color-->
+                    <use xlink:href="/images/sprite.svg#chevron"></use>
+                    </svg>
+                </span>
+        </header>
+        <div class="collapsible__content">
+            <ul class="list">
+                <li><a href="#"> About </a></li>
+                <li><a href="#"> Affiliates </a></li>
+                <li><a href="#"> Blog </a></li>
+            </ul>
+        </div>
+        
+    </section>
+
+
+    <section class="collapsible collapsible--expanded footer__section"> 
+        <header class="collapsible__header">
+            <h2 class ="collapsible__heading footer__heading"> Support <h2>
+               <!--<span class="icon-container"> this is removed to remove the container around the icon--> 
+                    <svg class="icon icon--white collapsible__chevron"> <!--Icon color-->
+                    <use xlink:href="/images/sprite.svg#chevron"></use>
+                    </svg>
+                </span>
+        </header>
+        <div class="collapsible__content">
+            <ul class="list">
+                <li><a href="#"> Contacts </a></li>
+                <li><a href="#"> Knowledge </a></li>
+                <li><a href="#"> FAQ </a></li>
+            </ul>
+        </div>
+        
+    </section>
+
+    <section class="collapsible collapsible--expanded footer__section"> <!--remove collapsible--expanded class -->
+        <header class="collapsible__header">
+            <h2 class ="collapsible__heading footer__heading"> Domains <h2>
+               <!--<span class="icon-container"> this is removed to remove the container around the icon--> 
+                    <svg class="icon icon--white collapsible__chevron"> <!--Icon color-->
+                    <use xlink:href="/images/sprite.svg#chevron"></use>
+                    </svg>
+                </span>
+        </header>
+        <div class="collapsible__content">
+            <ul class="list">
+                <li><a href="#"> Domain Checker </a></li>
+                <li><a href="#"> Domain Transfer </a></li>
+                <li><a href="#"> Free Domain </a></li>
+            </ul>
+        </div>
+        
+    </section>
+
+
+    <section class="footer__brand">
+<img src="/Images/logo.svg" alt="">
+<p class=" footer__copyright">Copyright 2021 Job Abraham</p> 
+    </section>
+</div>
+
+
+
+
+
+</footer>
+
+<script src="/Java Script/index.js"></script> <!--Why we add js code at the end of the mark up becasue we dont want the js code to hold up the rendering of the page each time it is dipolyed-->
+
+</body>
+</html>
