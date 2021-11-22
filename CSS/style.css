@@ -145,6 +145,7 @@ a {
   list-style: none; /*It helps to get rid of the default bullet point*/
   padding-left: 0; /*This get rid of the default browser padding*/
   
+  
 }
 
 .list--inline .list__item {
@@ -211,7 +212,7 @@ https://sprit.es/*/
   font-size: 1.8rem;
   font-weight: 600;
   margin: 1rem 0; /*It gives vertical(1) horizondal(0)  gap between buttons */
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   outline:0;
   text-align: center;
   text-transform: uppercase; /*ALWAYS MAKE SURE TEXT INSIDE THE BUTTON IS IN UPPER CASE */
@@ -298,6 +299,7 @@ https://sprit.es/*/
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width:0;
 }
 .input-group .btn {
   /*button margin inside the input group*/
@@ -748,8 +750,9 @@ margin: 2rem 0 5rem;
   max-width:670px;
 }
 .block-domain__prices{
+  color:var(--color-headings);
   display:grid;
-  grid-template-columns:repeat(3, 1fr );
+  grid-template-columns:repeat(2, 1fr );
   grid-template-rows:repeat(2, 6rem ); /*with column and rows we now designed a grid*/
   font-size:2rem;
   font-weight:600;
