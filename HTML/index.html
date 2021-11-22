@@ -38,9 +38,7 @@
 <section class=" block block--dark block--skewed-left hero">
 
 <div class=" container grid grid--1x2"> 
-    <!--.grid.grid--1x2> to put the 2 column grid inside a 
-        container we can do it in two ways create a seperate container class and add gird inside that/ 
-        caoninater grid as shown above-->
+    
         <header class="block__header hero__content">
             <h1 class="block__heading">Cloud Hosting for Pros</h1>
             <p class ="hero__tagline">Diploy your website in less than 60 seconds.</p>
@@ -61,7 +59,7 @@
 
 <section class="block block container block-domain">
 
-    <header class="block__header"> <!--block header class helps to center the heading -->
+    <header class="block__header"> 
         <h2>
            Starting at $9 per month 
         </h2>
@@ -72,8 +70,7 @@
         <input type="text" class ="input" placeholder="Enter domain name here..">
         <button class="btn btn--accent"><svg class="icon icon--white ">
             <use xlink:href="/images/sprite.svg#search"></use>
-            </svg>Search</button>  <!--Putting search button inside the div to make it inside the input field
-            TRICK: If we add button class right above the input- Search button will move to the left-->
+            </svg>Search</button>  
         </div>
     <ul class="list block-domain__prices">
        <li ><span class=" badge badge--secondary">.com $9</span></li>
@@ -101,9 +98,9 @@
             <span class="plan_discription">Easy start on the cloud</span>
             <div class="card__body">
               
-            </header> <!--We use underscore here because it is a componet inside this block. It cannot excist itsown-->
-                <ul class="list list--tick"> <!--ul.list>{Item $}*3 is the short cut to create list itemsa s given below-->
-                    <li class="list__item">Unlimited Websites</li>  <!--class="list__items" __BEM convention sepearte a block from its element-internal parts of the item-->
+            </header> 
+                <ul class="list list--tick"> 
+                    <li class="list__item">Unlimited Websites</li> 
                     <li class="list__item">Unlimited Bandwidth</li>
                     <li class="list__item">100 GB SSD Storage</li>
                     <li class="list__item">3 GB Ram</li>
@@ -125,9 +122,9 @@
                 <span class="plan_discription">Easy start on the cloud</span>
                 <div class="card__body">
                   
-                </header> <!--We use underscore here because it is a componet inside this block. It cannot excist itsown-->
-                    <ul class="list list--tick"> <!--ul.list>{Item $}*3 is the short cut to create list itemsa s given below-->
-                        <li class="list__item">Unlimited Websites</li>  <!--class="list__items" __BEM convention sepearte a block from its element-internal parts of the item-->
+                </header>
+                    <ul class="list list--tick"> 
+                        <li class="list__item">Unlimited Websites</li>  
                         <li class="list__item">Unlimited Bandwidth</li>
                         <li class="list__item">100 GB SSD Storage</li>
                         <li class="list__item">3 GB Ram</li>
@@ -148,9 +145,9 @@
     <span class="plan_discription">Easy start on the cloud</span>
     <div class="card__body">
       
-    </header> <!--We use underscore here because it is a componet inside this block. It cannot excist itsown-->
-        <ul class="list list--tick"> <!--ul.list>{Item $}*3 is the short cut to create list itemsa s given below-->
-            <li class="list__item">Unlimited Websites</li>  <!--class="list__items" __BEM convention sepearte a block from its element-internal parts of the item-->
+    </header> 
+        <ul class="list list--tick"> 
+            <li class="list__item">Unlimited Websites</li>  
             <li class="list__item">Unlimited Bandwidth</li>
             <li class="list__item">100 GB SSD Storage</li>
             <li class="list__item">3 GB Ram</li>
@@ -170,7 +167,7 @@
         <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Autem, ut molestiae iure aut vitae maiores!</p>
 
     </header>
-    <article class="grid grid--1x2 feature"> <!--independant self contained element  should be the content of article-->
+    <article class="grid grid--1x2 feature"> 
         <div class="feature__content">
             <span class="icon-container">
                 <svg class="icon icon--primary ">
@@ -193,7 +190,7 @@
 
 
 
-        <article class="grid grid--1x2 feature"> <!--independant self contained element  should be the content of article-->
+        <article class="grid grid--1x2 feature"> 
             <div class="feature__content">
                 <span class="icon-container">
                     <svg class="icon icon--primary ">
@@ -217,7 +214,7 @@
 
 
 
-            <article class="grid grid--1x2 feature"> <!--independant self contained element  should be the content of article-->
+            <article class="grid grid--1x2 feature">
                 <div class="feature__content">
                     <span class="icon-container">
                         <svg class="icon icon--primary ">
@@ -257,8 +254,7 @@
     <img src="/Images/ipad.png" alt=""/>
 
 </picture>
-<ul class="list"> <!--this class of list removes the bullet point that comes with UL-->
-    <li>
+<ul class="list"> 
         <div class="media">
             <div class="media__image">
              
@@ -352,7 +348,7 @@
                                </div>
                                </div>
                              
-                        </footer> <!--Footer need not be part of a page. it acan be part of a card,article,section /part of anything-->
+                        </footer> 
                 </blockquote>
                 
             </div>
@@ -365,16 +361,15 @@
 
 <!--FOOTER-->
 
-<footer class="block block--dark footer "> <!--footer class is used here to target the
-     background color Targeting this way helps to keep the text color and remove block--dark background  color-->
+<footer class="block block--dark footer "> 
+     
 <div class="container grid footer__sections">
-    <!--add below collapsible component to add miltiple sections repalce DIV  with SECTION and copy 
-        and paste below according to how manysections to have as per design mockup -->
+    
     <section class="collapsible collapsible--expanded footer__section">
         <header class="collapsible__header">
             <h2 class ="collapsible__heading footer__heading"> products <h2>
-               <!--<span class="icon-container"> this is removed to remove the container around the icon--> 
-                    <svg class="icon icon--white collapsible__chevron"> <!--Icon color-->
+               
+                    <svg class="icon icon--white collapsible__chevron"> 
                     <use xlink:href="/images/sprite.svg#chevron"></use>
                     </svg>
                 </span>
@@ -389,11 +384,11 @@
         
     </section>
 
-    <section class="collapsible collapsible--expanded footer__section"> <!--remove collapsible--expanded class -->
+    <section class="collapsible collapsible--expanded footer__section"> 
         <header class="collapsible__header">
             <h2 class ="collapsible__heading footer__heading"> Company <h2>
-               <!--<span class="icon-container"> this is removed to remove the container around the icon--> 
-                    <svg class="icon icon--white collapsible__chevron"> <!--Icon color-->
+               
+                    <svg class="icon icon--white collapsible__chevron"> 
                     <use xlink:href="/images/sprite.svg#chevron"></use>
                     </svg>
                 </span>
@@ -412,7 +407,7 @@
     <section class="collapsible collapsible--expanded footer__section"> 
         <header class="collapsible__header">
             <h2 class ="collapsible__heading footer__heading"> Support <h2>
-               <!--<span class="icon-container"> this is removed to remove the container around the icon--> 
+               
                     <svg class="icon icon--white collapsible__chevron"> <!--Icon color-->
                     <use xlink:href="/images/sprite.svg#chevron"></use>
                     </svg>
@@ -428,11 +423,11 @@
         
     </section>
 
-    <section class="collapsible collapsible--expanded footer__section"> <!--remove collapsible--expanded class -->
+    <section class="collapsible collapsible--expanded footer__section">
         <header class="collapsible__header">
             <h2 class ="collapsible__heading footer__heading"> Domains <h2>
-               <!--<span class="icon-container"> this is removed to remove the container around the icon--> 
-                    <svg class="icon icon--white collapsible__chevron"> <!--Icon color-->
+               
+                    <svg class="icon icon--white collapsible__chevron">
                     <use xlink:href="/images/sprite.svg#chevron"></use>
                     </svg>
                 </span>
@@ -460,7 +455,7 @@
 
 </footer>
 
-<script src="/Java Script/index.js"></script> <!--Why we add js code at the end of the mark up becasue we dont want the js code to hold up the rendering of the page each time it is dipolyed-->
+<script src="/Java Script/index.js"></script> 
 
 </body>
 </html>
