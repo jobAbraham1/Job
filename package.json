@@ -1,7 +1,6 @@
 {
   "name": "webdesinging",
   "version": "1.0.0",
-  "description": "",
   "main": "index.js",
   "dependencies": {
     "acorn": "^8.6.0",
@@ -35,6 +34,7 @@
     "mime-types": "^2.1.34",
     "neo-async": "^2.6.2",
     "node-releases": "^2.0.1",
+    "parcel": "^2.0.1",
     "picocolors": "^1.0.0",
     "punycode": "^2.1.1",
     "randombytes": "^2.1.0",
@@ -52,13 +52,11 @@
     "webpack": "^5.64.4",
     "webpack-sources": "^3.2.2"
   },
-  "devDependencies": {
-    "parcel-bundler": "^1.12.4"
-  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "description": ""
 }
